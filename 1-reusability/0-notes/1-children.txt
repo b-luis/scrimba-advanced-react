@@ -1,0 +1,22 @@
+Children
+
+Button.jsx
+----------
+
+export const default function ({ children }) {
+    return <button>{children}</button>
+}
+
+App.jsx
+-------
+
+const App = () => {
+    return (
+        <main>
+            <Button>
+                {/* Icon goes here */}
+                Buy Now!
+            </Button>
+        </main>
+    )
+}

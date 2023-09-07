@@ -1,0 +1,69 @@
+Destructuring Props
+
+
+Button.jsx
+----------
+
+export default function Button({children, ...rest}) {
+    return (
+        <button {...rest}>
+            {children}
+        </button>
+    )
+}
+
+App.jsx
+-------
+
+const App = () => {
+  return (
+    <main>
+      <Button style={{color: "green"}} onClick={() => console.log("Logging in...")}>
+        <FcGoogle />
+        Log in with Google
+      </Button>
+    </main>
+  )
+}
+
+
+If we want to console.log the rest, we'll get : 
+
+- {variant: true, style: {color: "green"}, onClick: ƒ()}
+
+
+The ...rest spread operator is used to pass any additional props that are provided when you use the Button component. 
+
+
+It's a common pattern in React to use the spread operator to pass through props that a component doesn't explicitly handle.
+
+
+In this way, you can use the Button component as a generic button element that accepts any standard HTML button props (e.g., style, onClick, disabled, etc.) without having to define them all in your Button component's prop types. 
+
+=======================================
+
+<Button style={{color: "green"}} onClick={() => console.log("Logging in...")}>
+  <FcGoogle />
+  Log in with Google
+</Button>
+
+=======================================
+
+The style and onClick props are not explicitly handled by your Button component. Instead of listing them individually in your Button component's prop declarations, you can use ...rest to pass any additional props through to the underlying button element.
+
+This makes your Button component more flexible and allows you to easily customize button behavior when needed.
+
+
+=======================================
+
+export default function Button({ text, ...rest }) {
+  return (
+    <button {...rest}>
+      {text}
+    </button>
+  );
+}
+
+=======================================
+
+You can use the ...rest spread operator in a component even when it doesn't have children. It's a common practice to make your components more versatile and allow for easy customization when using them.

@@ -1,0 +1,76 @@
+Size prop
+
+
+Button.jsx
+----------
+
+export default function Button({children, size, ...rest}) {
+    /**
+     * Challenge: accept the `size` prop and set the `className` of the
+     * <button> to:
+     * 
+     * "button-small" if `size` is "sm"
+     * "button-large" if `size` is "lg"
+     * 
+     * Note: don't try to manually add a `className` to the Button
+     * instance in index.js yet. (DO add `className` to this file
+     * as part of the challenge, though.)
+     */
+    
+    return (
+        <button className={`${size === "sm" ? "button-small" : "button-large"}`} {...rest}>
+            {children}
+        </button>
+    )
+}
+
+App.jsx
+-------
+
+const App = () => {
+  return (
+    <main>
+      <Button size="lg">Log in with Google</Button>
+    </main>
+  )
+}
+
+
+Fix className Issue
+
+Unprofessional
+--------------
+
+export default function Button({children, className, size, ...rest}) {
+    /**
+     * Challenge: See if you can fix the problem with the
+     * conflicting `className` props. Doesn't need to be
+     * elegant, just see if you can get the button to be
+     * both large AND with green text
+     */
+    
+    let sizeClass = size ? `button-${size}` : ""
+    
+    return (
+        <button className={`${sizeClass} ${className}`} {...rest}>
+            {children}
+        </button>
+    )
+}
+
+More Professional Way
+---------------------
+
+import classnames from "classsnames"
+
+export default function Button({children, className, size, ...rest}) {
+    let sizeClass = size ? `button-${size}` : ""
+    
+    const allClasses = classnames(sizeClass, className)
+    
+    return (
+        <button className={allClasses} {...rest}>
+            {children}
+        </button>
+    )
+}
