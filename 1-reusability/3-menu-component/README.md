@@ -1,8 +1,3 @@
-# React + Vite
+Compound components is a design pattern that allows you to create a set of components that work together to form a larger, more complex component. This pattern is useful when you want to maintain a clear and structured API for your component while allowing for flexibility and customization.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/b-luis/scrimba-advanced-react/assets/139755358/faff1a58-08b0-482a-bf72-6b270dd3c903)
