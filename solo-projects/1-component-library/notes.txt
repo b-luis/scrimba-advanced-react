@@ -1,0 +1,12 @@
+Questions:
+- How do I apply the learnings from previous lessons such as :
+  Compound components
+  context
+  Render props
+  Custom Hooks
+
+I need to think through these decisions to apply what I have learned.
+
+For the Badges:
+- challenging myself by using context to pass the color and text props for practice purposes and abstract the code inside the App.jsx
+- 

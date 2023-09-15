@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background: #e5e7eb;
+	font-size: 16px;
+}
+
+/* body * {
+	outline: 1px solid magenta;
+} */
